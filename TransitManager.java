@@ -23,7 +23,7 @@ public class TransitManager {
       		+ "\nsee a list of all vehicles or ones that need repair."
       		+ "\n");
 	  
-      while (!selection.contains("0") | !selection.contains("0")) {
+      while (!selection.contains("0") && !selection.contains("no")) {
     	  System.out.println("What would you like to do?\n"
   	      		+ "1) Add a bus,"
   	      		+ "\n2) Add a subway Car,"
@@ -43,9 +43,11 @@ public class TransitManager {
           	  milesPerGallon = Integer.parseInt(scan.nextLine());
           	  System.out.println("Does it need repair? true/false");
       	      repair = scan.nextBoolean();
+      	      scan.nextLine();
         	  vehicleList.add(new Bus(routeInfo, vehicleID, repair, milesPerGallon));
         	  System.out.println("Anything else? yes/no");
         	  selection = scan.nextLine();
+        	  System.out.println("selection" + selection);
           } else if (selection.contains("2")) {
         	  System.out.println("Enter vehicle ID");
           	  vehicleID = scan.nextLine();
@@ -55,6 +57,7 @@ public class TransitManager {
         	  underground = scan.nextBoolean();
         	  System.out.println("Does it need repair? true/false");
         	  repair = scan.nextBoolean();
+        	  scan.nextLine();
         	  vehicleList.add(new SubwayCar(routeInfo, vehicleID, underground, repair));
         	  System.out.println("Anything else? yes/no");
         	  selection = scan.nextLine();
@@ -79,8 +82,8 @@ public class TransitManager {
               System.out.println("Anything else? yes/no");
         	  selection = scan.nextLine();
           }
-    	  
       }
+      System.out.print("You have exited the system.");
    }
 }
 
