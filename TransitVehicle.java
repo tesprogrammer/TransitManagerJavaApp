@@ -1,8 +1,3 @@
-// Author: Tesfa Habebo
-
-package cs254_assignment_w8_m12_personalproject;
-
-import cs254_assignment_MemberClass.Member;
 
 public class TransitVehicle {
 	public String routeInfo;

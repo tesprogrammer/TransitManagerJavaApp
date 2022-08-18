@@ -1,4 +1,3 @@
-package cs254_assignment_w8_m12_personalproject;
 
 import java.util.ArrayList;
 
